@@ -2643,7 +2643,7 @@ on init
 
 							set_engine_par($ENGINE_PAR_RESONANCE, 1000000 * (get_control_par(get_ui_id ($knob_bussynth_phase_filter__reso),$CONTROL_PAR_VALUE) - get_control_par(get_ui_id ($knob_bussynth_phase_filter__reso),$CONTROL_PAR_MIN_VALUE)) / (get_control_par(get_ui_id ($knob_bussynth_phase_filter__reso),$CONTROL_PAR_MAX_VALUE) - get_control_par(get_ui_id ($knob_bussynth_phase_filter__reso),$CONTROL_PAR_MIN_VALUE)), -1, $bussynth_fx_slot_num__phase_filter, $NI_BUS_OFFSET + $num_of_bus_with_scripted_fx)
 
-							$calc_bussynth_karplusstrong_feedback_level := (get_control_par(get_ui_id($knob_delay_karplusstrong_feedback_level),$CONTROL_PAR_VALUE) - get_control_par(get_ui_id($knob_delay_karplusstrong_feedback_level),$CONTROL_PAR_MIN_VALUE))
+							$calc_bussynth_karplusstrong_feedback_level := (get_control_par(get_ui_id($knob_bussynth_karplusstrong__feedback),$CONTROL_PAR_VALUE) - get_control_par(get_ui_id($knob_bussynth_karplusstrong__feedback),$CONTROL_PAR_MIN_VALUE))
 							$calc_bussynth_karplusstrong_feedback_level := real_to_int( exp( log(1000000.0) * int_to_real($calc_bussynth_karplusstrong_feedback_level) / int_to_real($calc_bussynth_karplusstrong_feedback_level + 1)  ) )
 							set_engine_par($ENGINE_PAR_RDL_FEEDBACK, $calc_bussynth_karplusstrong_feedback_level, -1, $bussynth_fx_slot_num__karplusstrong, $NI_BUS_OFFSET + $num_of_bus_with_scripted_fx)
 
@@ -3275,7 +3275,7 @@ function load_bus_synth_channel_fx()
 
 	wait_async(set_engine_par($ENGINE_PAR_RESONANCE, 1000000 * (get_control_par(get_ui_id ($knob_bussynth_phase_filter__reso),$CONTROL_PAR_VALUE) - get_control_par(get_ui_id ($knob_bussynth_phase_filter__reso),$CONTROL_PAR_MIN_VALUE)) / (get_control_par(get_ui_id ($knob_bussynth_phase_filter__reso),$CONTROL_PAR_MAX_VALUE) - get_control_par(get_ui_id ($knob_bussynth_phase_filter__reso),$CONTROL_PAR_MIN_VALUE)), -1, $bussynth_fx_slot_num__phase_filter, $NI_BUS_OFFSET + $num_of_bus_with_scripted_fx))
 
-	$calc_bussynth_karplusstrong_feedback_level := (get_control_par(get_ui_id($knob_delay_karplusstrong_feedback_level),$CONTROL_PAR_VALUE) - get_control_par(get_ui_id($knob_delay_karplusstrong_feedback_level),$CONTROL_PAR_MIN_VALUE))
+	$calc_bussynth_karplusstrong_feedback_level := (get_control_par(get_ui_id($knob_bussynth_karplusstrong__feedback),$CONTROL_PAR_VALUE) - get_control_par(get_ui_id($knob_bussynth_karplusstrong__feedback),$CONTROL_PAR_MIN_VALUE))
 	$calc_bussynth_karplusstrong_feedback_level := real_to_int( exp( log(1000000.0) * int_to_real($calc_bussynth_karplusstrong_feedback_level) / int_to_real($calc_bussynth_karplusstrong_feedback_level + 1)  ) )
 	wait_async(set_engine_par($ENGINE_PAR_RDL_FEEDBACK, $calc_bussynth_karplusstrong_feedback_level, -1, $bussynth_fx_slot_num__karplusstrong, $NI_BUS_OFFSET + $num_of_bus_with_scripted_fx))
 
@@ -3931,9 +3931,9 @@ end on
 {+                                                                                              +}
 {+                        S a m p l e r   T e m p l a t e   S c r i p t                         +}
 {+                                                                                              +}
-{+                                          v 0 . 7 4                                           +}
+{+                                          v 0 . 7 5                                           +}
 {+                                                                                              +}
-{+                               last edit date: 2024-07-14-19-23                               +}
+{+                               last edit date: 2024-07-18-14-22                               +}
 {+                                                                                              +}
 {+                               (c)   J a n   M a c h a l s k i                                +}
 {+                                                                                              +}

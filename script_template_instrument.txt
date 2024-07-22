@@ -1792,8 +1792,8 @@ on init
 					set_control_par(get_ui_id ($knob_bussynth_karplusstrong__dry_signal_lvl),$CONTROL_PAR_POS_Y,22)
 					set_control_par_str(get_ui_id ($knob_bussynth_karplusstrong__dry_signal_lvl),$CONTROL_PAR_TEXT, "   " & "dry")
 					set_control_par_str(get_ui_id ($knob_bussynth_karplusstrong__dry_signal_lvl),$CONTROL_PAR_HELP, "Dry signal amount.")
-					set_control_par(get_ui_id ($knob_bussynth_karplusstrong__dry_signal_lvl),$CONTROL_PAR_VALUE, 0)
-					set_control_par(get_ui_id ($knob_bussynth_karplusstrong__dry_signal_lvl),$CONTROL_PAR_DEFAULT_VALUE, 0)
+					set_control_par(get_ui_id ($knob_bussynth_karplusstrong__dry_signal_lvl),$CONTROL_PAR_VALUE, 100)
+					set_control_par(get_ui_id ($knob_bussynth_karplusstrong__dry_signal_lvl),$CONTROL_PAR_DEFAULT_VALUE, 100)
 					make_persistent($knob_bussynth_karplusstrong__dry_signal_lvl)
 					read_persistent_var($knob_bussynth_karplusstrong__dry_signal_lvl)
 
@@ -3931,9 +3931,9 @@ end on
 {+                                                                                              +}
 {+                        S a m p l e r   T e m p l a t e   S c r i p t                         +}
 {+                                                                                              +}
-{+                                          v 0 . 7 5                                           +}
+{+                                          v 0 . 7 6                                           +}
 {+                                                                                              +}
-{+                               last edit date: 2024-07-18-14-22                               +}
+{+                               last edit date: 2024-07-22-16-22                               +}
 {+                                                                                              +}
 {+                               (c)   J a n   M a c h a l s k i                                +}
 {+                                                                                              +}
